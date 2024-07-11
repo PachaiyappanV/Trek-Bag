@@ -13,13 +13,19 @@ const App = () => {
     const newItems = [...items, newItem];
     setItems(newItems);
   };
+  const handleRemoveAllItems = () => {
+    setItems([]);
+  };
   return (
     <>
       <BackgroundHeading />
       <main>
         <Header />
         <ItemList items={items} />
-        <Sidebar handleAddItem={handleAddItem} />
+        <Sidebar
+          handleAddItem={handleAddItem}
+          handleRemoveAllItems={handleRemoveAllItems}
+        />
       </main>
       <Footer />
     </>
