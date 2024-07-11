@@ -5,7 +5,7 @@ const AddItemForm = () => {
     <form>
       <h2>Add an item</h2>
       <input />
-      <Button text="Add to list" />
+      <Button>Add to list</Button>
     </form>
   );
 };
