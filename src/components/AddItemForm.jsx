@@ -1,14 +1,15 @@
 import { useRef, useState } from "react";
 import Button from "./Button";
 
-const AddItemForm = ({ setItems }) => {
+const AddItemForm = ({ handleAddItem }) => {
   const [itemText, setItemText] = useState("");
   const inputRef = useRef();
 
   const onSubmit = (e) => {
     e.preventDefault();
     //simple validation
-    if (!itemText) {
+
+    if (!itemText.trim()) {
       alert("Item can't be empty");
       inputRef.current.focus();
       return;
@@ -18,7 +19,8 @@ const AddItemForm = ({ setItems }) => {
       name: itemText,
       packed: false,
     };
-    setItems((prev) => [...prev, newItem]);
+    handleAddItem(newItem);
+    setItemText("");
   };
 
   return (
