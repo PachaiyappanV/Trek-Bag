@@ -17,7 +17,7 @@ export const initialItems = [
     packed: false,
   },
   {
-    id: 1,
+    id: 3,
     name: "phone charger",
     packed: false,
   },
