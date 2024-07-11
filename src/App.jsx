@@ -13,8 +13,13 @@ const App = () => {
     const newItems = [...items, newItem];
     setItems(newItems);
   };
+
   const handleRemoveAllItems = () => {
     setItems([]);
+  };
+
+  const handleResetToInitial = () => {
+    setItems(initialItems);
   };
   return (
     <>
@@ -25,6 +30,7 @@ const App = () => {
         <Sidebar
           handleAddItem={handleAddItem}
           handleRemoveAllItems={handleRemoveAllItems}
+          handleResetToInitial={handleResetToInitial}
         />
       </main>
       <Footer />
