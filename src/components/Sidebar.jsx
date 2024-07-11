@@ -5,6 +5,7 @@ const Sidebar = ({
   handleAddItem,
   handleRemoveAllItems,
   handleResetToInitial,
+  handleMarkAllComplete,
 }) => {
   return (
     <div className="sidebar">
@@ -12,6 +13,7 @@ const Sidebar = ({
       <ButtonGroup
         handleRemoveAllItems={handleRemoveAllItems}
         handleResetToInitial={handleResetToInitial}
+        handleMarkAllComplete={handleMarkAllComplete}
       />
     </div>
   );

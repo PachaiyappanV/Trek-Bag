@@ -21,6 +21,11 @@ const App = () => {
   const handleResetToInitial = () => {
     setItems(initialItems);
   };
+
+  const handleMarkAllComplete = () => {
+    const completedItems = items.map((item) => ({ ...item, packed: true }));
+    setItems(completedItems);
+  };
   return (
     <>
       <BackgroundHeading />
@@ -31,6 +36,7 @@ const App = () => {
           handleAddItem={handleAddItem}
           handleRemoveAllItems={handleRemoveAllItems}
           handleResetToInitial={handleResetToInitial}
+          handleMarkAllComplete={handleMarkAllComplete}
         />
       </main>
       <Footer />
