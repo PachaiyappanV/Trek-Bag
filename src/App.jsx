@@ -9,6 +9,9 @@ import { initialItems } from "./lib/constants";
 const App = () => {
   const [items, setItems] = useState(initialItems);
 
+  const totalNoOfItems = items.length;
+  const numberOfItemsPacked = items.filter((item) => item.packed).length;
+
   const handleAddItem = (newItem) => {
     const newItems = [...items, newItem];
     setItems(newItems);
@@ -49,7 +52,10 @@ const App = () => {
     <>
       <BackgroundHeading />
       <main>
-        <Header />
+        <Header
+          totalNoOfItems={totalNoOfItems}
+          numberOfItemsPacked={numberOfItemsPacked}
+        />
         <ItemList
           items={items}
           handleDeleteItem={handleDeleteItem}

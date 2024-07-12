@@ -1,7 +1,7 @@
-const Counter = () => {
+const Counter = ({ totalNoOfItems, numberOfItemsPacked }) => {
   return (
     <p>
-      <b>1 </b>/ 3 items packed
+      <b>{numberOfItemsPacked} </b>/ {totalNoOfItems} items packed
     </p>
   );
 };
