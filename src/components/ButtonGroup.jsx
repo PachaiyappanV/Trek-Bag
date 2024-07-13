@@ -1,6 +1,5 @@
-import { useContext } from "react";
 import Button from "./Button";
-import { ItemsContext } from "../contexts/ItemsContextProvider";
+import useItemsContext from "../lib/hooks";
 
 const ButtonGroup = () => {
   const {
@@ -8,7 +7,7 @@ const ButtonGroup = () => {
     handleResetToInitial,
     handleMarkAllComplete,
     handleMarkAllInComplete,
-  } = useContext(ItemsContext);
+  } = useItemsContext();
   return (
     <section className="button-group">
       <Button buttonType="secondary" onClick={handleMarkAllComplete}>
