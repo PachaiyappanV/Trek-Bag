@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import Button from "./Button";
-const ButtonGroup = ({
-  handleRemoveAllItems,
-  handleResetToInitial,
-  handleMarkAllComplete,
-  handleMarkAllInComplete,
-}) => {
+import { ItemsContext } from "../contexts/ItemsContextProvider";
+
+const ButtonGroup = () => {
+  const {
+    handleRemoveAllItems,
+    handleResetToInitial,
+    handleMarkAllComplete,
+    handleMarkAllInComplete,
+  } = useContext(ItemsContext);
   return (
     <section className="button-group">
       <Button buttonType="secondary" onClick={handleMarkAllComplete}>
