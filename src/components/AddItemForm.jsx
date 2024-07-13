@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Button from "./Button";
 
-const AddItemForm = ({ handleAddItem }) => {
+const AddItemForm = ({ onAddItem }) => {
   const [itemText, setItemText] = useState("");
   const inputRef = useRef();
 
@@ -19,7 +19,7 @@ const AddItemForm = ({ handleAddItem }) => {
       name: itemText,
       packed: false,
     };
-    handleAddItem(newItem);
+    onAddItem(newItem);
     setItemText("");
   };
 
